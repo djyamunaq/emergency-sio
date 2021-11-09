@@ -1,0 +1,93 @@
+<div class="page-student-content">
+    <!--Vertical NavBar-->
+    <div class="sidebar">
+        <img src="/images/profile.png" alt="profile" class="profile">
+        <div class="sidebar-content">
+            <ul class="sidebar-content">
+                <li class="">
+                    <p class="sidebar-item">Nome: <%-name%> </p>
+                </li>
+                <li class="">
+                    <p class="sidebar-item">Número: <%-number%> </p>
+                </li>
+                <li class="">
+                    <p class="sidebar-item">Saldo: <%-saldo%> </p>
+                </li>
+            </ul>
+            <form action='/propinas' method="GET">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Pagar propinas</button>
+            </form> 
+            <form action='/logout' method="GET">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign out</button>
+            </form> 
+        </div>
+    </div>
+
+    <!--Content-->
+    <div class="student-content">
+        <!-- Questions for teachers -->
+        <h2>Duvidas</h2>
+        <form action='/question' method="POST">
+            <div class="form-group">
+                <input name="teacher" class="form-control">
+                <textarea name="comment" class="form-control" rows="3"></textarea>
+                <button type="submit" class="btn btn-primary">Submit comment</button>
+            </div>
+        </form>
+        <!--Title and search-->
+        <div class="title-searh">
+            <div  class="page-title"><h2>Minhas Disciplinas</h2></div>
+            <div class="search">
+                <form action="/search_result" method="GET">
+                    <input type="text" name="search" id="txtBusca" placeholder="Buscar disciplina" height="50px"/>
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div> 
+        <!--Cards-->
+        <div class="py-5">
+            <div class="row hidden-md-up">
+                <div class="col-md-4">
+                    <div class="card"style="width: 18rem;">
+                        <div class="card-block">
+                            <img src="/images/math.png" alt="" class="card-img-top" >
+                            <div class="card-content">
+                                <h4 class="card-title">Matemática</h4>
+                                <p class="card-text p-y-1">Professor: <%-mteacher%></p>
+                                <button class="btn btn-primary btn-md btn-block" style="background:#1b98e0 !important;border: #1b98e0;">Notas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"style="width: 18rem;">
+                        <div class="card-block">
+                            <img src="/images/fisica.png" alt="" class="card-img-top" >
+                            <div class="card-content">
+                                <h4 class="card-title">Física</h4>
+                                <p class="card-text p-y-1">Professor: <%-fteacher%> </p>
+                                <button class="btn btn-primary btn-md btn-block" style="background:#1b98e0 !important;border: #1b98e0;">Notas</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"style="width: 18rem;">
+                        <div class="card-block">
+                            <img src="/images/reacao-quimica.png" alt="" class="card-img-top" >
+                            <div class="card-content">
+                                <h4 class="card-title">Quimica</h4>
+                                <p class="card-text p-y-1">Professor: <%-qteacher%> </p>
+                                <button class="btn btn-primary btn-md btn-block" style="background:#1b98e0 !important;border: #1b98e0;">Notas</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="footer">
+    <p class="copyright">©Desenvolvido pelo grupo 3</p>
+</div>

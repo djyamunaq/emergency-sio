@@ -1,0 +1,82 @@
+<div class="page-student-content">
+    <!--Vertical NavBar-->
+    <div class="sidebar">
+        <img src="/images/profile.png" alt="profile" class="profile">
+        
+        <div class="sidebar-content">
+            <ul class="sidebar-content">
+                <li class="">
+                    <p class="sidebar-item">Nome: <%-name%> </p>
+                </li>
+                <li class="">
+                    <p class="sidebar-item">Disciplina: <%-subject%> </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Content-->
+    <div class="student-content">
+        <!-- Questions -->
+        <form action='/question' method="GET">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Questions</button>
+        </form> 
+        <!-- Sign out -->
+        <form action='/logout' method="GET">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign out</button>
+        </form> 
+
+        <!--Title and search-->
+        <div class="title-searh">
+            <div  class="page-title"><h2>Minhas Turmas</h2></div>
+            <div class="search">
+                <form action="/turmas" method="GET">
+                    <input type="text" name="turma" id="txtBusca" placeholder="Buscar disciplina" height="50px"/>
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div> 
+        <!--Cards-->
+        <div class="py-5">
+            <div class="row hidden-md-up">
+                <div class="col-md-4">
+                    <div class="card"style="width: 18rem;">
+                        <div class="card-block">
+                            <img src="/images/math.png" alt="" class="card-img-top" >
+                            <div class="card-content">
+                                <h4 class="card-title">10º Ano</h4>
+                                <button class="btn btn-primary btn-md btn-block" style="background:#1b98e0 !important;border: #1b98e0;">Alunos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"style="width: 18rem;">
+                        <div class="card-block">
+                            <img src="/images/fisica.png" alt="" class="card-img-top" >
+                            <div class="card-content">
+                                <h4 class="card-title">11ºAno</h4>
+                                <button class="btn btn-primary btn-md btn-block" style="background:#1b98e0 !important;border: #1b98e0;">Alunos</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"style="width: 18rem;">
+                        <div class="card-block">
+                            <img src="/images/reacao-quimica.png" alt="" class="card-img-top" >
+                            <div class="card-content">
+                                <h4 class="card-title">12º</h4>
+                                <button class="btn btn-primary btn-md btn-block" style="background:#1b98e0 !important;border: #1b98e0;">Alunos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="footer">
+    <p class="copyright">©Desenvolvido pelo grupo 3</p>
+</div>
